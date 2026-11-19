@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="了解 Gymora 的三种门店部署方式，比较店外访问、电脑开机要求和服务器租金。">
+  <meta name="description" content="比较 Gymora 的三种部署方式，包括店外访问、微信小程序、电脑开机要求和服务器租金。">
   <meta name="theme-color" content="#142a26">
   <title>Gymora 部署说明</title>
   <link rel="stylesheet" href="./guide.css?v=deployment">
@@ -24,19 +24,24 @@
         <article>
           <h2>只在店里用</h2>
           <p>Gymora 装在店里的一台电脑上。员工和学员要连店里的 Wi-Fi。打烊可以关机，关机后系统暂停使用，第二天开机后恢复。</p>
+          <p><strong>微信小程序</strong> 目前可连店里的 Wi-Fi 试用开发版，正式使用还需在手机上验收。微信登录需要能上网。</p>
           <p class="price">服务器租金 <strong>¥0</strong></p>
         </article>
         <article>
           <h2>装在店里，回家也能用</h2>
           <p>Gymora 和门店记录放在店里的电脑上。租一台便宜的云服务器，让学员在家也能访问。店里的电脑要一直开机联网，关机或断网时，店外就用不了。</p>
+          <p><strong>微信小程序</strong> 开通后，学员在家连 Wi-Fi 或出门用手机流量，都可以从微信进入。</p>
           <p class="price">服务器租金 <strong>约 ¥40/月</strong></p>
         </article>
         <article>
           <h2>打烊关电脑，学员照样用</h2>
           <p>Gymora 和门店记录都放在租来的云服务器上。员工和学员有网就能用，店里打烊可以把电脑都关掉。</p>
+          <p><strong>微信小程序</strong> 开通后，学员在家也能从微信进入。</p>
           <p class="price">服务器租金 <strong>约 ¥65/月起</strong></p>
         </article>
       </div>
+      <p class="setup-note"><strong>电脑怎么进</strong> 三种方案都可使用 Gymora 客户端。想直接用浏览器打开，请在安装时同时配置网页入口。</p>
+      <p class="setup-note"><strong>小程序怎么开通</strong> 目前提供开发版和线上试用。正式上线前要完成微信备案、审核和手机验收。给店外使用的小程序还要配置微信认可的网上访问地址。<a href="https://cloud.tencent.com/document/faq/243/97691">查看小程序备案说明</a></p>
     </section>
 
     <section id="budget" aria-labelledby="budget-title">
@@ -56,7 +61,6 @@
       </div>
       <p class="cost-note">价格参考腾讯云轻量应用服务器的中国内地「入门型」月标价。¥65 档含 5 Mbps 峰值带宽和每月 500 GB 流量。实际价格和可选地区以购买页为准。<a href="https://cloud.tencent.com/document/product/1207/73452#e759be02-a0a2-4e0f-bea6-8b9f9a3a5642">查看腾讯云中国内地套餐价格</a></p>
       <p class="cost-note">表里的硬盘由操作系统、Gymora 和门店数据共用。加购硬盘、备份、访问地址、设备、电费和安装维护另计。人数用于估预算，上线前按晚高峰实测选配置。</p>
-      <p class="setup-note">如果要从微信小程序进入，请提前告诉安装人员，一起准备网上访问地址，并完成微信要求的备案和审核。<a href="https://cloud.tencent.com/document/faq/243/97691">查看小程序备案说明</a></p>
     </section>
   </main>
 </body>
