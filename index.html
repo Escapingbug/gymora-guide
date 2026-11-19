@@ -16,7 +16,7 @@
       <a class="brand" href="#main">Gymora</a>
       <nav aria-label="说明书目录">
         <a href="#features">功能手册</a>
-        <a href="#deployment">部署</a>
+        <a href="#deployment">门店怎么用</a>
         <a href="#budget">预算</a>
         <a href="#getting-started">上线准备</a>
         <a class="demo-link" href="./demo/">在线演示</a>
@@ -117,86 +117,101 @@
       </section>
 
       <section id="deployment" aria-labelledby="deployment-title">
-        <h2 id="deployment-title">三种部署方式</h2>
-        <p class="section-intro">先决定学员是否需要在家或用手机流量查课、约课，再决定是否让店里留一台机器持续开机。店里的机器可以是兼容的小型电脑、服务器或支持安装系统的存储设备（NAS），由部署人员确认。</p>
+        <h2 id="deployment-title">学员在家也要能约课吗？</h2>
+        <p class="section-intro">如果只在到店时办理，选「只在店里用」。如果学员在家也要查课、约课，就看打烊后能不能留一台店里的电脑开着。</p>
         <div class="deployment-list">
           <article>
             <div class="deployment-heading">
               <h3>只在店里用</h3>
-              <p>适合前台、教练和学员到店办理</p>
+              <p>学员到店后连店里的 Wi-Fi 查课，前台当面办卡和登记收款。</p>
             </div>
             <dl>
-              <div><dt>怎么访问</dt><dd>连接能访问店内主机的门店 Wi-Fi 或有线网络，使用已授权的客户端。手机流量和店外 Wi-Fi 无法访问。</dd></div>
-              <div><dt>机器关了会怎样</dt><dd>系统和数据都在店里。要使用就让主机保持开机、联网且服务正常，关机、休眠或局域网故障时无法办理。只断外网时，已授权客户端的本地业务可继续，微信登录、外部通知和云端 AI 仍需互联网。</dd></div>
-              <div><dt>主要费用</dt><dd>云服务器租金为 <strong>¥0</strong>。自备设备，另计电费和备份等支出。可按营业时段开机。</dd></div>
+              <div><dt>学员在家能用吗？</dt><dd>不能。人在店里用手机流量也不行，手机要连店里的 Wi-Fi。</dd></div>
+              <div><dt>打烊可以关电脑吗？</dt><dd>可以。请安装人员确认店里哪台电脑可以装 Gymora，营业时开机。那台电脑一关，店里也用不了，第二天开机、等系统启动后就能继续用。如果只是店里上不了互联网，装系统的电脑和店里的 Wi-Fi 都正常，已登录的员工仍可查课和登记收款。</dd></div>
+              <div><dt>每月大概花多少钱？</dt><dd><strong>服务器租金 ¥0。</strong> 店里自己准备电脑，另计电费和备份开支。</dd></div>
             </dl>
           </article>
           <article>
             <div class="deployment-heading">
-              <h3>店里运行，云端提供远程入口</h3>
-              <p>适合已有常开设备，希望学员在家也能约课</p>
+              <h3>装在店里，回家也能用</h3>
+              <p>学员晚上在家约明天的课，会员和课程记录都存在店里的电脑上。</p>
             </div>
             <dl>
-              <div><dt>怎么访问</dt><dd>配置公网入口后，已授权的教练和学员可在外面用手机流量或其他 Wi-Fi 连接。云服务器负责转发加密连接，系统和业务数据库仍在店内主机。</dd></div>
-              <div><dt>机器关了会怎样</dt><dd>店内主机要持续开机并能上网，云端入口也要在线。店里关机、停电或断外网，店外用户就无法使用。另配店内直连后，公网入口故障时，已授权客户端还能在店内访问。</dd></div>
-              <div><dt>主要费用</dt><dd>可租一台轻量服务器做转发，预算示例 <strong>¥40/月</strong>，另计域名、店内设备电费和备份。</dd></div>
+              <div><dt>学员在家能用吗？</dt><dd>能。在家连 Wi-Fi 或用手机流量都可以。每月租一台便宜的云服务器，让店外的手机能连到店里的电脑。</dd></div>
+              <div><dt>打烊可以关电脑吗？</dt><dd>装 Gymora 的那台电脑要一直开着、能上网。如果它就是前台电脑，前台打烊也得留着开机。那台电脑关机，或店里停电、断网，学员在家就用不了。</dd></div>
+              <div><dt>每月大概花多少钱？</dt><dd><strong>服务器租金约 ¥40/月。</strong> 另计店里电脑的电费、网上访问地址和备份。</dd></div>
             </dl>
           </article>
           <article>
             <div class="deployment-heading">
-              <h3>系统和数据都放云上</h3>
-              <p>适合营业结束后也要用，或店里经常关机</p>
+              <h3>打烊关电脑，学员照样用</h3>
+              <p>前台下班可以关机，学员晚上仍能约课，教练在家也能查明天的安排。</p>
             </div>
             <dl>
-              <div><dt>怎么访问</dt><dd>系统和数据库都在租用的云服务器上，用户有网即可用已授权客户端从店内或店外访问。</dd></div>
-              <div><dt>机器关了会怎样</dt><dd>关掉前台电脑或店里停电，店外用户仍可访问。店里断网时，店员可用手机流量接入。云服务故障则影响所有访问者。</dd></div>
-              <div><dt>主要费用</dt><dd>小型单店可先按 <strong>¥65/月</strong> 做主机预算，按忙时使用人数、报表和数据量再升配。</dd></div>
+              <div><dt>学员在家能用吗？</dt><dd>能。Gymora 和会员、课程记录都放在服务商那里的电脑上，也就是租用的云服务器。店员和学员有网就能用。</dd></div>
+              <div><dt>打烊可以关电脑吗？</dt><dd>可以，店里不用留电脑开机。店里断网时，店员可用手机流量访问。租用的服务器发生故障时，店里和店外都会受影响。</dd></div>
+              <div><dt>每月大概花多少钱？</dt><dd><strong>小型单店可先按 ¥65/月估算服务器租金。</strong> 忙时越多人一起查课、约课或做报表，越可能需要更高的配置。</dd></div>
             </dl>
           </article>
         </div>
-        <p class="inline-note"><strong>需要正式微信小程序？</strong> 选型时一起确认微信小程序备案、服务器的加密连接域名和微信审核要求。纯店内 Wi-Fi 方案适用于已授权客户端；小程序试用的调试方式需在正式交付前换成微信认可的连接配置。中国大陆公网入口需同时与服务商确认备案和接入条件。<br><a href="https://cloud.tencent.com/document/faq/243/19630">域名备案说明</a> · <a href="https://cloud.tencent.com/document/faq/243/97691">小程序备案说明</a></p>
+        <p class="inline-note"><strong>想让学员直接从微信小程序进入？</strong> 选方案时先告诉安装人员。正式小程序需要准备网上访问地址，并按微信要求完成备案和审核。<br><a href="https://cloud.tencent.com/document/faq/243/97691">微信小程序备案说明</a></p>
       </section>
 
       <section id="budget" aria-labelledby="budget-title">
-        <h2 id="budget-title">按使用规模估算云服务器费用</h2>
-        <p class="section-intro">看最忙时段大约有多少人在用。例如，500 名活跃学员中晚高峰约有 5% 同时看课表或约课，再加 5 位教练和前台，约 30 人同时使用。同样按 5% 估算，1,500 名活跃学员加 8 位员工约为 83 人。只做转发的方案主要看网络。全云方案还要给报表、导出和数据库留余量。</p>
-        <div class="table-wrap" tabindex="0" role="region" aria-label="云服务器配置与费用参考，可横向滚动">
+        <h2 id="budget-title">店里不留电脑开机，每月要花多少？</h2>
+        <p class="section-intro">看最忙的时候，有多少学员和员工会一起打开系统。比如有 500 名常来上课的学员，晚高峰大约有 25 人同时查课或约课，再加上 5 位员工，就是 30 人一起用，可以先按 ¥65/月估算。</p>
+        <div class="table-wrap budget-summary">
           <table>
-            <caption>腾讯云中国大陆轻量应用服务器入门型参考价</caption>
+            <caption>服务器租金参考</caption>
             <thead>
-              <tr><th scope="col">适用场景</th><th scope="col">起步配置</th><th scope="col">月标价</th><th scope="col">按月标价 × 12</th></tr>
+              <tr><th scope="col">最忙时一起用的人数</th><th scope="col">按月预算</th><th scope="col">12 个月合计</th></tr>
             </thead>
             <tbody>
-              <tr><th scope="row">只做公网转发</th><td>2 核 · 2 GB 内存 · 40 GB 硬盘<br>3 Mbps 带宽 · 200 GB/月</td><td>¥40</td><td>¥480</td></tr>
-              <tr><th scope="row">全云 · 约 30 人以内同时使用</th><td>2 核 · 4 GB 内存 · 60 GB 硬盘<br>5 Mbps 带宽 · 500 GB/月</td><td>¥65</td><td>¥780</td></tr>
-              <tr><th scope="row">全云 · 约 31–100 人同时使用</th><td>4 核 · 8 GB 内存 · 120 GB 硬盘<br>10 Mbps 带宽 · 1,500 GB/月</td><td>¥210</td><td>¥2,520</td></tr>
-              <tr><th scope="row">全云 · 超过约 100 人同时使用</th><td>可从 4 核 · 16 GB 内存 · 180 GB 硬盘<br>12 Mbps 带宽 · 2,000 GB/月起做压测</td><td>¥305</td><td>¥3,660</td></tr>
+              <tr><th scope="row">约 30 人以内</th><td>¥65</td><td>¥780</td></tr>
+              <tr><th scope="row">约 31–100 人</th><td>¥210</td><td>¥2,520</td></tr>
+              <tr><th scope="row">超过约 100 人</th><td>从 ¥305 估起</td><td>从 ¥3,660 估起</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="cost-note">以上人数用于选购和压测，尚无实测承载上限。按常规查课、约课和收款估算，频繁跑大报表、集中导出、存放大量合同或本机运行 AI 模型需另评估。价格核对于 <time datetime="2026-11-19">2026 年 11 月 19 日</time>，年参考为月标价乘 12，实际新购及续费以购买页为准。域名、备份空间、超额流量、安装维护、短信、模型和电子签费用另计。<br><a href="https://cloud.tencent.com/document/product/1207/73452">腾讯云官方价格表</a></p>
+        <p class="cost-note">人数是做预算用的估算。正式上线前应试一下晚高峰的使用情况，再确定买哪一档。表中只列服务器租金，安装维护、网上访问地址、备份和短信等额外服务另计。<br><a href="https://cloud.tencent.com/document/product/1207/73452">腾讯云官方价格表</a></p>
 
         <form id="estimate" class="estimator" aria-labelledby="estimate-title" hidden>
           <div>
             <h3 id="estimate-title">估算我的门店</h3>
-            <p>填入活跃学员人数，以及最忙时段同时使用的比例和员工数。</p>
+            <p>填常来的学员数，再估计最忙时每 100 名学员里有几人同时使用。</p>
             <div class="fields">
-              <label>活跃学员（人）<input id="members" type="number" min="0" max="100000" step="1" value="500" required></label>
-              <label>学员同时使用比例（%）<input id="share" type="number" min="0" max="100" step="1" value="5" required></label>
-              <label>同时使用的员工（人）<input id="staff" type="number" min="0" max="100000" step="1" value="5" required></label>
+              <label>常来的学员（人）<input id="members" type="number" min="0" max="100000" step="1" value="500" required></label>
+              <label>每 100 名学员里同时使用的人数<input id="share" type="number" min="0" max="100" step="1" value="5" required></label>
+              <label>同时在用的员工（人）<input id="staff" type="number" min="0" max="100000" step="1" value="5" required></label>
             </div>
           </div>
           <output id="estimate-result" for="members share staff" aria-live="polite"></output>
         </form>
+        <details class="installer-details">
+          <summary>发给安装人员的配置和价格参考</summary>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="服务器配置与价格，可横向滚动">
+            <table>
+              <caption>腾讯云中国大陆轻量应用服务器入门型参考价</caption>
+              <thead><tr><th scope="col">用途</th><th scope="col">起步配置</th><th scope="col">月标价</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">店内运行，服务器提供店外访问</th><td>2 核 · 2 GB 内存 · 40 GB 硬盘<br>3 Mbps 带宽 · 200 GB/月</td><td>¥40</td></tr>
+                <tr><th scope="row">服务器运行，约 30 人以内同时使用</th><td>2 核 · 4 GB 内存 · 60 GB 硬盘<br>5 Mbps 带宽 · 500 GB/月</td><td>¥65</td></tr>
+                <tr><th scope="row">服务器运行，约 31–100 人同时使用</th><td>4 核 · 8 GB 内存 · 120 GB 硬盘<br>10 Mbps 带宽 · 1,500 GB/月</td><td>¥210</td></tr>
+                <tr><th scope="row">服务器运行，超过约 100 人同时使用</th><td>从 4 核 · 16 GB 内存 · 180 GB 硬盘<br>12 Mbps 带宽 · 2,000 GB/月起做压力测试</td><td>¥305</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="cost-note">价格核对于 <time datetime="2026-11-19">2026 年 11 月 19 日</time>，年参考为月标价乘 12，实际新购及续费以购买页为准。超额流量、大量合同文件、集中导出和本机 AI 模型需单独估算。中国大陆公网入口需与服务商确认域名备案及接入要求。<br><a href="https://cloud.tencent.com/document/faq/243/19630">域名备案说明</a></p>
+        </details>
       </section>
 
       <section id="getting-started" aria-labelledby="getting-started-title">
         <h2 id="getting-started-title">上线前要准备什么</h2>
         <ol class="launch-list">
           <li><strong>确认访问需求。</strong> 敲定哪些人需要在店外使用、计划使用哪些手机和电脑，以及预计最忙时多少人同时操作。</li>
-          <li><strong>准备运行环境。</strong> 选择一台店内主机或购买云资源；需要公网时准备域名及对应备案或接入事项。指定负责设备、网络、续费和日常备份的人。</li>
+          <li><strong>把选好的方案告诉安装人员。</strong> 说清楚是否需要学员在家使用、打烊后能否留一台店里的电脑开着，以及是否需要微信小程序。确认谁负责设备、续费和备份。</li>
           <li><strong>初始化门店。</strong> 店主创建门店并绑定首位管理员。管理员设置收费项目，邀请本人加入或绑定已有档案；配置首发使用的通知通道。</li>
-          <li><strong>用三种身份各试一次。</strong> 登记实收，依次验证学员申请、教练审批、出勤、本人确认和结课，再核对最终课时余额。需要远程访问时用手机流量验证，启用外部通知时用真实接收人验证。</li>
+          <li><strong>用三种身份各试一次。</strong> 登记实收，依次验证学员申请、教练审批、出勤、本人确认和结课，再核对最终课时余额。如果学员需要在家用，就拿手机关掉店里的 Wi-Fi，用手机流量试一次。需要收提醒时，再用真实接收人验证。</li>
           <li><strong>确认备份和恢复。</strong> 定期把业务数据和必要的系统密钥备份到另一处，正式运营前实际恢复一次。已有会员、余额和合同记录的迁入范围与时间应提前确认。</li>
         </ol>
       </section>

@@ -2,9 +2,9 @@ const estimateForm = document.querySelector("#estimate");
 const result = document.querySelector("#estimate-result");
 const inputs = ["members", "share", "staff"].map(id => document.getElementById(id));
 const packages = [
-  { upTo: 30, setup: "2 核 · 4 GB 内存", monthlyPrice: 65 },
-  { upTo: 100, setup: "4 核 · 8 GB 内存", monthlyPrice: 210 },
-  { upTo: Infinity, setup: "4 核 · 16 GB 内存起，需先压测", monthlyPrice: 305 },
+  { upTo: 30, monthlyPrice: 65 },
+  { upTo: 100, monthlyPrice: 210 },
+  { upTo: Infinity, monthlyPrice: 305 },
 ];
 const numberFormat = new Intl.NumberFormat("zh-CN");
 
@@ -21,10 +21,12 @@ function updateEstimate() {
     return;
   }
 
-  const { setup, monthlyPrice } = packages.find(option => peak <= option.upTo);
+  const { monthlyPrice } = packages.find(option => peak <= option.upTo);
   const count = document.createElement("strong");
   count.textContent = `约 ${numberFormat.format(peak)} 人同时使用`;
-  const summary = `全云起步参考 · ${setup} · ¥${monthlyPrice}/月`;
+  const summary = peak <= 100
+    ? `店里不用留电脑开机，服务器租金约 ¥${monthlyPrice}/月。`
+    : `服务器租金可从 ¥${monthlyPrice}/月估起，再按高峰时段的使用情况调整。`;
   result.replaceChildren(count, summary);
 }
 

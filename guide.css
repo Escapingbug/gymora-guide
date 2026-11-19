@@ -117,6 +117,11 @@ th, td { text-align: left; padding: .65rem 1rem; border-top: 1px solid var(--lin
 thead { background: var(--wash); }
 td:nth-last-child(-n + 2) { white-space: nowrap; font-variant-numeric: tabular-nums; }
 
+.budget-summary th, .budget-summary td { padding-inline: clamp(.45rem, 2vw, 1rem); }
+.budget-summary td { white-space: normal; }
+.installer-details { margin-top: 1.5rem; }
+.installer-details summary { cursor: pointer; color: var(--green); font-weight: 750; }
+
 .estimator {
   margin-top: 1.65rem;
   background: var(--wash);
@@ -164,7 +169,7 @@ td:nth-last-child(-n + 2) { white-space: nowrap; font-variant-numeric: tabular-n
   .header-inner { padding-block: .6rem; }
   .deployment-list article { grid-template-columns: 1fr; }
   .fields { grid-template-columns: repeat(auto-fit, minmax(7.25rem, 1fr)); }
-  .table-wrap table { min-width: 32rem; }
+  .table-wrap:not(.budget-summary) table { min-width: 32rem; }
 }
 
 @media print {
